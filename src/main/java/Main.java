@@ -3,45 +3,32 @@ package main.java;
 import java.util.Scanner;
 
 /**
- * A, B 두사람이 가위바위보를 함.
- * N번의 게임을 해서 A가 이기면 A를 출력하고 B가 이기면 B를 출력, 비기면 D
- * 정보는 1:가위, 2:바위, 3:보
- * 첫째 줄에 게임 횟수 N 주어지고
- * 둘째 줄에 A가 낸 가위바위보 정보 N개 주어지고
- * 셋째 줄에 B가 낸 가위바위보 정보 N개 주어짐
- *
+ * 피보나치 수열을 출력. 앞의 2개의 수를 합해서 다음 숫자가 되는 수열
+ * 입력은 피보나치 수열의 총 항의 수 7이 입력되면
+ * 1 1 2 3 5 8 13을 출력
  */
 
 public class Main {
 
-    public String solution(int n, int[] arrA, int[] arrB){
-        String answer = "";
+    public int[] solution(int n) {
+        int[] answer = new int[n];
+        answer[0] = 1;
+        answer[1] = 1;
 
-        for (int i = 0; i < n; i++) {
-            if(arrA[i] == arrB[i]) answer += "D";
-            else if(arrA[i]==1 && arrB[i] == 3) answer += "A";
-            else if(arrA[i]==2 && arrB[i] == 1) answer += "A";
-            else if(arrA[i]==3 && arrB[i] == 2) answer += "A";
-            else answer += "B";
-            }
-        return answer;
+        for (int i = 2; i < n; i++) {
+            answer[i] = answer[i - 1] + answer[i - 2];
         }
+
+        return answer;
+    }
 
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
-        int[] arrA = new int[n];
-        for (int i = 0; i < n; i++) {
-            arrA[i] = kb.nextInt();
-        }
-        int[] arrB = new int[n];
-        for (int i = 0; i < n; i++) {
-            arrB[i] = kb.nextInt();
-        }
 
-        for(char x : T.solution(n, arrA, arrB).toCharArray()){
-            System.out.println(x);
+        for (int x : T.solution(n)) {
+            System.out.print(x + " ");
         }
     }
 }

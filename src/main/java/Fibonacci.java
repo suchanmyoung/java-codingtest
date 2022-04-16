@@ -8,7 +8,7 @@ import java.util.Scanner;
  * 1 1 2 3 5 8 13을 출력
  */
 
-public class Main {
+public class Fibonacci {
 
     public int[] solution(int n) {
         int[] answer = new int[n];
@@ -23,7 +23,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        Fibonacci T = new Fibonacci();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
 

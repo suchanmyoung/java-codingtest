@@ -8,3 +8,7 @@
   * 2진수인 tmp를 10진수로 바꿔줌
 * nextInt() 
   * 숫자 하나를 입력으로 처리(스페이스바 또는 엔터로 개행 가능)
+* Integer.MIN_VALUE 
+  * Integer 타입 중 제일 작은 숫자
+* Math.max(a, b, c)
+  * a,b,c 중 가장 큰 숫자

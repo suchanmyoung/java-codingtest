@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * N*N의 격자판이 주어지면 각 행의 합, 각 열의 합, 두 대각선의 합 중 가장 큰 합을 출력
  */
-public class Main {
+public class sumRowCol {
 
     public int solution(int n, int[][] arr){
         int answer=Integer.MIN_VALUE;
@@ -31,7 +31,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        sumRowCol T = new sumRowCol();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         int[][] arr = new int[n][n];

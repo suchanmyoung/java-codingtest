@@ -12,3 +12,6 @@
   * Integer 타입 중 제일 작은 숫자
 * Math.max(a, b, c)
   * a,b,c 중 가장 큰 숫자
+* HashSet 
+  * 중복 제거
+  * size 메소드로 갯수 파악

@@ -12,11 +12,10 @@ import java.util.Scanner;
  * 1+2+3+4+5 = 15와 같이 총 3가지의 경우가 조냊한다.
  */
 
-public class Main {
-
+public class ContinuousNumbers {
     public int solution(int n) {
         int answer=0;
-        int sum=0;
+        int sum= 0;
         int lt =0;
         int m = n/2+1;
 
@@ -31,7 +30,7 @@ public class Main {
             if(sum==n) answer++; // sum == n이면 answer 증가
             while (sum >= n) { // sum이 n보다 큰 경우 반복
                 sum -= arr[lt++]; // 왼쪽 포인터 값을 빼주고 포인터 이동
-                if(sum==n) answer++;
+                if(sum==n) answer++; // 같으면 answer 증가해주고, 증가된 lt 값을 한 번 빼면서 다시 돌아야함.
             }
         }
 
@@ -39,7 +38,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        ContinuousNumbers T = new ContinuousNumbers();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
 

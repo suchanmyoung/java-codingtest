@@ -15,3 +15,6 @@
 * HashSet 
   * 중복 제거
   * size 메소드로 갯수 파악
+* HashMap
+  * map.getOrDefault!!!
+  * ketSet!!!

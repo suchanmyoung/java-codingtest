@@ -18,3 +18,6 @@
 * HashMap
   * map.getOrDefault!!!
   * ketSet!!!
+* STACK 
+  * pop 은 꺼낸 값을 리턴해주기도 함
+  * peek : 스택의 가장 위쪽에 있는 값을 확인만 함(pop은 꺼내면서 확인)

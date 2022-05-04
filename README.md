@@ -21,3 +21,8 @@
 * STACK 
   * pop 은 꺼낸 값을 리턴해주기도 함
   * peek : 스택의 가장 위쪽에 있는 값을 확인만 함(pop은 꺼내면서 확인)
+* Character.isDigit : 숫잔지 확인 !!
+* Queue queue = new LinkedList<>();
+  * offer로 넣고 poll로 확인
+  * peek()로 꺼내지는 않고 확인
+  * contain(x) - x가 있으면 참

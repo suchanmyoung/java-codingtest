@@ -18,7 +18,7 @@ import java.util.Scanner;
  * 첫 번째 줄부터 DVD의 최소 용량 크기
  */
 
-public class Main {
+public class DetermineAlgorithm {
 
     public int count(int[] arr, int capacity) {
         int cnt=1, sum=0;
@@ -46,7 +46,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main T = new Main();
+        DetermineAlgorithm T = new DetermineAlgorithm();
         Scanner kb = new Scanner(System.in);
         int n = kb.nextInt();
         int m = kb.nextInt();

@@ -26,3 +26,9 @@
   * offer로 넣고 poll로 확인
   * peek()로 꺼내지는 않고 확인
   * contain(x) - x가 있으면 참
+* Character.getNumericValue 
+  * 케릭터를 숫자로 변환
+* Integer.parseInt(i, 3)
+  * 3진법으로 변환
+* StringBuilder()에는 reverser()가 있음
+* 숫자를 스트링으로 변환할 때는 String.valueOf()

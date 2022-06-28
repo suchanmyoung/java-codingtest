@@ -33,3 +33,4 @@
 * StringBuilder()에는 reverser()가 있음
 * 숫자를 스트링으로 변환할 때는 String.valueOf()
 * Math.pow로 제곱 계산 할 수 있음!
+* String.valueOf(char[]) 로 char array를 String으로 만듬!

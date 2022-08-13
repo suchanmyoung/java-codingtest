@@ -4,43 +4,41 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class ShortestPathBfs {
-
-
-    public static class Node{
-        int data;
+    public static class Node {
         Node lt, rt;
+        int data;
 
         public Node(int val) {
             data = val;
-            lt=rt=null;
+            lt = rt = null;
         }
     }
-
-
     Node root;
 
     public int BFS(Node root) {
         Queue<Node> Q = new LinkedList<>();
-        int L = 0;
         Q.offer(root);
-        while (!Q.isEmpty()) {
+        int L = 0;
+        while(!Q.isEmpty()){
             int len = Q.size();
             for (int i = 0; i < len; i++) {
                 Node cur = Q.poll();
-                if (cur.lt != null) {
+                if (cur.lt == null && cur.rt == null) {
+                    return L;
+                }
+                if (cur.lt != null){
                     Q.offer(cur.lt);
                 }
                 if (cur.rt != null) {
                     Q.offer(cur.rt);
-                }
-                if (cur.lt == null && cur.rt == null) {
-                    return L;
                 }
             }
             L++;
         }
         return 0;
     }
+
+
     public static void main(String[] args) {
         ShortestPathBfs tree = new ShortestPathBfs();
         tree.root = new Node(1);

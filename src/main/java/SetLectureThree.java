@@ -36,7 +36,8 @@ public class SetLectureThree {
                 answer[i] = list.get(i);
             }
 
-            return answer;
+            return list.stream().mapToInt(Integer::intValue)
+                .toArray();
             }
     }
 

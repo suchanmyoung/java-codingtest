@@ -1,31 +1,25 @@
 package main.java;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 
 public class SortLectureThree {
     static class Solution {
 
         public String[] solution(String[] strings, int n) {
-            String[] answer = new String[strings.length];
-            ArrayList<String> list = new ArrayList<>();
-            for (int i = 0; i < strings.length; i++) {
-                list.add(strings[i].charAt(n) + strings[i]);
-            }
+            Arrays.sort(strings, (s1, s2) ->{
+                if (s1.charAt(n) == s2.charAt(n)) {
+                    return s1.compareTo(s2);
+                }
+                return s1.charAt(n) - s2.charAt(n);
+            });
 
-            Collections.sort(list);
-
-            for (int i = 0; i < answer.length; i++) {
-                answer[i] = list.get(i).substring(1);
-            }
-
-            return answer;
+            return strings;
         }
 
         public static void main(String[] args) {
             String[] arr = {"sun", "bed", "car"};
             Solution solution = new Solution();
-            System.out.println(solution.solution(arr, 1));
+            System.out.println(Arrays.toString(solution.solution(arr, 1)));
         }
     }
 }

@@ -1,34 +1,20 @@
 package main.java;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class SortLectureTwo {
     static class Solution{
         public int[] solution(int[] arr) {
-            List<Integer> list = new LinkedList<>();
-
-            for (int i : arr) {
-                list.add(i);
+            if (arr.length == 1) {
+                return new int[]{-1};
             }
 
-            int minValue = Arrays.stream(arr)
+            int min = Arrays.stream(arr)
                 .min()
                 .getAsInt();
 
-            for (int i = 0; i < arr.length; i++) {
-                if (minValue == arr[i]) {
-                    list.remove(i);
-                }
-            }
-
-            if (list.size() == 0) {
-                list.add(-1);
-            }
-
-            return list.stream()
-                .mapToInt(Integer::intValue)
+            return Arrays.stream(arr)
+                .filter(a -> a != min)
                 .toArray();
         }
     }
